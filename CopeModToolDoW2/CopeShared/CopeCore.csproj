@@ -75,7 +75,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Be.Windows.Forms.HexBox">
-      <HintPath>..\3rd\Be.Windows.Forms.HexBox.dll</HintPath>
+      <HintPath>..\3rd\Be.Windows.Forms.HexBox\Be.Windows.Forms.HexBox.dll</HintPath>
     </Reference>
     <Reference Include="cope, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>

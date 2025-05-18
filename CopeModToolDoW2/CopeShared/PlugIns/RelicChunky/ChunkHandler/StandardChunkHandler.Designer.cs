@@ -55,7 +55,7 @@
             //
             this.m_hbxRawData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_hbxRawData.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_hbxRawData.LineInfoForeColor = System.Drawing.Color.Blue;
+            this.m_hbxRawData.InfoForeColor = System.Drawing.Color.Blue;
             this.m_hbxRawData.LineInfoVisible = true;
             this.m_hbxRawData.Location = new System.Drawing.Point(3, 3);
             this.m_hbxRawData.Name = "m_hbxRawData";
