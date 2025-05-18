@@ -1,4 +1,0 @@
-0. Make sure references to cope-Framework are working.
-1. Build project.
-2. ImageViewerPlugin, RBFEditorPlugin, ScarPlugin files go into plugins\filetypes subdir.
-3. Get archive.exe from DoW2 directory and put it into the tools\ subdir.
