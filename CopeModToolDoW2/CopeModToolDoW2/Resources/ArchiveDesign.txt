@@ -1,0 +1,6 @@
+<Archive Name="{0}" DefaultCompression="Buffer">
+	<TOC Name="{1}" Alias="{1}" RelativeRoot="\" />
+	<IncludeRule RegExp=".+" MinSize="-1" MaxSize="-1" />
+	<CompressionRule RegExp=".+" MinSize="-1" MaxSize="-1" CompressionType="Stream" />
+	<Directory Name="" />
+</Archive>

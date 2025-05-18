@@ -1,0 +1,3 @@
+LIBRARY LuaLibLoad
+EXPORTS
+luaSelfTest=luaSelfTest

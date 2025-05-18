@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGAPatcher", "SGAPatcher\SGAPatcher.csproj", "{2096BC60-A298-4C71-AC32-C2B1EB29B1E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGAPatchCreator", "SGAPatchCreator\SGAPatchCreator.csproj", "{4FB3113C-03F9-43C3-916C-DD391E972535}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGADump", "SGADump\SGADump.csproj", "{8030D16C-BC4B-472B-8DF6-02F31A28A424}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2096BC60-A298-4C71-AC32-C2B1EB29B1E0}.Debug|x86.ActiveCfg = Debug|x86
+		{2096BC60-A298-4C71-AC32-C2B1EB29B1E0}.Debug|x86.Build.0 = Debug|x86
+		{2096BC60-A298-4C71-AC32-C2B1EB29B1E0}.Release|x86.ActiveCfg = Release|x86
+		{2096BC60-A298-4C71-AC32-C2B1EB29B1E0}.Release|x86.Build.0 = Release|x86
+		{4FB3113C-03F9-43C3-916C-DD391E972535}.Debug|x86.ActiveCfg = Debug|x86
+		{4FB3113C-03F9-43C3-916C-DD391E972535}.Debug|x86.Build.0 = Debug|x86
+		{4FB3113C-03F9-43C3-916C-DD391E972535}.Release|x86.ActiveCfg = Release|x86
+		{4FB3113C-03F9-43C3-916C-DD391E972535}.Release|x86.Build.0 = Release|x86
+		{8030D16C-BC4B-472B-8DF6-02F31A28A424}.Debug|x86.ActiveCfg = Debug|x86
+		{8030D16C-BC4B-472B-8DF6-02F31A28A424}.Debug|x86.Build.0 = Debug|x86
+		{8030D16C-BC4B-472B-8DF6-02F31A28A424}.Release|x86.ActiveCfg = Release|x86
+		{8030D16C-BC4B-472B-8DF6-02F31A28A424}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

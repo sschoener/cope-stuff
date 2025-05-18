@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E43974C5-8841-4BBA-9315-BBD703C9548F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RBFPlugin</RootNamespace>
+    <AssemblyName>RBFEditorPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\CopeModToolDoW2\bin\x86\Debug\plugins\filetypes\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\CopeModToolDoW2\bin\x86\Release\plugins\filetypes\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="cope, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\..\copeFrameWork\cope\bin\x86\Release\cope.dll</HintPath>
+    </Reference>
+    <Reference Include="cope.DawnOfWar2, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\..\copeFrameWork\cope.DawnOfWar2\bin\x86\Release\cope.DawnOfWar2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddToLibrary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddToLibrary.Designer.cs">
+      <DependentUpon>AddToLibrary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DictionaryCrawler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DictionaryCrawler.Designer.cs">
+      <DependentUpon>DictionaryCrawler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryCrawlerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibraryCrawlerForm.Designer.cs">
+      <DependentUpon>LibraryCrawlerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RBFConvParserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBFConvParserControl.Designer.cs">
+      <DependentUpon>RBFConvParserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBFConvParserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RBFConvParserForm.Designer.cs">
+      <DependentUpon>RBFConvParserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBFCrawler.cs" />
+    <Compile Include="RBFDictionary.cs" />
+    <Compile Include="RBFEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBFEditor.Designer.cs">
+      <DependentUpon>RBFEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBFEditorCore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBFEditorCore.Designer.cs">
+      <DependentUpon>RBFEditorCore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBFEditorPlugin.cs" />
+    <Compile Include="RBFLibrary.cs" />
+    <Compile Include="RBFLibraryEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RBFLibraryEditor.Designer.cs">
+      <DependentUpon>RBFLibraryEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBFOptionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RBFOptionsDialog.Designer.cs">
+      <DependentUpon>RBFOptionsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBFSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RBFSearchForm.Designer.cs">
+      <DependentUpon>RBFSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBFSettings.cs" />
+    <Compile Include="TagEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagEditor.Designer.cs">
+      <DependentUpon>TagEditor.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddToLibrary.resx">
+      <DependentUpon>AddToLibrary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictionaryCrawler.resx">
+      <DependentUpon>DictionaryCrawler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibraryCrawlerForm.resx">
+      <DependentUpon>LibraryCrawlerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBFConvParserControl.resx">
+      <DependentUpon>RBFConvParserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBFConvParserForm.resx">
+      <DependentUpon>RBFConvParserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBFEditor.resx">
+      <DependentUpon>RBFEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBFEditorCore.resx">
+      <DependentUpon>RBFEditorCore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBFLibraryEditor.resx">
+      <DependentUpon>RBFLibraryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBFOptionsDialog.resx">
+      <DependentUpon>RBFOptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBFSearchForm.resx">
+      <DependentUpon>RBFSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagEditor.resx">
+      <DependentUpon>TagEditor.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CopeShared\CopeCore.csproj">
+      <Project>{4BF1F3D8-9DAC-4FAF-9427-5109D1495D8A}</Project>
+      <Name>CopeCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RBFDictInfo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RBFLibInfo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmarks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-open.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

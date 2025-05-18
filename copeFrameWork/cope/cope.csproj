@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{45FBEFB6-5708-4A29-9664-69725B601F5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cope</RootNamespace>
+    <AssemblyName>cope</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>False</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>True</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <DocumentationFile>bin\x86\Release\cope.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArgParser.cs" />
+    <Compile Include="ArrayHelper.cs" />
+    <Compile Include="CustomHeap.cs" />
+    <Compile Include="DelegateHeap.cs" />
+    <Compile Include="Either.cs" />
+    <Compile Include="EitherLeft.cs" />
+    <Compile Include="EitherRight.cs" />
+    <Compile Include="Extensions\FloatExt.cs" />
+    <Compile Include="Extensions\IListExt.cs" />
+    <Compile Include="Extensions\StringArrayExt.cs" />
+    <Compile Include="Extensions\TextWriterExt.cs" />
+    <Compile Include="FileSystem\FileSystemExt.cs" />
+    <Compile Include="FileSystem\EnumerationOptions.cs" />
+    <Compile Include="FileSystem\FileSystemEntryExt.cs" />
+    <Compile Include="FileSystem\FileSystemPossibility.cs" />
+    <Compile Include="FileSystem\IShadowFileDescriptor.cs" />
+    <Compile Include="FileSystem\RealFileDescriptor.cs" />
+    <Compile Include="FileSystem\ShadowedLocalDirectoryDescriptor.cs" />
+    <Compile Include="FileSystem\ShadowedLocalFileDescriptor.cs" />
+    <Compile Include="FileSystem\ShadowedLocalFileSystem.cs" />
+    <Compile Include="Graphs\GraphPath.cs" />
+    <Compile Include="Graphs\NodeCombination.cs" />
+    <Compile Include="HeapSort.cs" />
+    <Compile Include="ADT\ThreadSafeQueue.cs" />
+    <Compile Include="Heap.cs" />
+    <Compile Include="ADT\ThreadSafeStack.cs" />
+    <Compile Include="ArrayPool.cs" />
+    <Compile Include="CircularArray.cs" />
+    <Compile Include="CopeException.cs" />
+    <Compile Include="CRC32.cs" />
+    <Compile Include="DataPool.cs" />
+    <Compile Include="Extensions\BinaryReaderExt.cs" />
+    <Compile Include="Extensions\BinaryWriterExt.cs" />
+    <Compile Include="Extensions\BitConverterExt.cs" />
+    <Compile Include="BinaryString.cs" />
+    <Compile Include="Extensions\BitArrayExt.cs" />
+    <Compile Include="Extensions\BoolExt.cs" />
+    <Compile Include="ByteArrayConverter.cs" />
+    <Compile Include="CharTypeChecker.cs" />
+    <Compile Include="Extensions\DateTimeExt.cs" />
+    <Compile Include="Extensions\ExceptionExt.cs" />
+    <Compile Include="FileSystem\FileEnumerator.cs" />
+    <Compile Include="FileSystem\FileOpenOptions.cs" />
+    <Compile Include="FileSystem\FileSystemEnumerator.cs" />
+    <Compile Include="FileSystem\FileSystemEnumeratorBase.cs" />
+    <Compile Include="FileSystem\FileSystemWalker.cs" />
+    <Compile Include="FileSystem\FileWalker.cs" />
+    <Compile Include="FileSystem\IFileSystem.cs" />
+    <Compile Include="FileSystem\IFileDescriptor.cs" />
+    <Compile Include="FileSystem\IFileSystemEntry.cs" />
+    <Compile Include="FileSystem\IDirectoryDescriptor.cs" />
+    <Compile Include="FileSystem\LocalDirectoryDescriptor.cs" />
+    <Compile Include="FileSystem\LocalFileDescriptor.cs" />
+    <Compile Include="FileSystem\LocalFileSystem.cs" />
+    <Compile Include="GeneratorEnumerator.cs" />
+    <Compile Include="GeneratorStream.cs" />
+    <Compile Include="Graphs\AdjacencyMatrixGraph.cs" />
+    <Compile Include="Graphs\BreadthFirstEnumerator.cs" />
+    <Compile Include="Graphs\BreadthFirstWalker.cs" />
+    <Compile Include="Graphs\DepthFirstEnumerator.cs" />
+    <Compile Include="Graphs\DepthFirstWalker.cs" />
+    <Compile Include="Graphs\EdgeInfo.cs" />
+    <Compile Include="Graphs\Graph.cs" />
+    <Compile Include="Graphs\GraphExt.cs" />
+    <Compile Include="Graphs\IGraph.cs" />
+    <Compile Include="Graphs\RandomGraph.cs" />
+    <Compile Include="Graphs\UndirectedGraph.cs" />
+    <Compile Include="Graphs\WeightedAdjacencyMatrixGraph.cs" />
+    <Compile Include="Graphs\WeightedGraph.cs" />
+    <Compile Include="Graphs\WeightedUndirectedGraph.cs" />
+    <Compile Include="HexString.cs" />
+    <Compile Include="Extensions\ICollectionExt.cs" />
+    <Compile Include="Extensions\IEnumerableExt.cs" />
+    <Compile Include="Extensions\ListBoxExt.cs" />
+    <Compile Include="Extensions\ProcessExt.cs" />
+    <Compile Include="Extensions\RandomExt.cs" />
+    <Compile Include="Extensions\StackExt.cs" />
+    <Compile Include="Extensions\StringBuilderExt.cs" />
+    <Compile Include="ConstantEnumerator.cs" />
+    <Compile Include="IO\XmlConfigReader.cs" />
+    <Compile Include="KeyedValue.cs" />
+    <Compile Include="KeyedValueEnumerator.cs" />
+    <Compile Include="KeyValueSyntaxParser.cs" />
+    <Compile Include="KeyValueSyntaxWriter.cs" />
+    <Compile Include="KeyValueSyntaxWriterOptions.cs" />
+    <Compile Include="KeyValueTable.cs" />
+    <Compile Include="KeyValueType.cs" />
+    <Compile Include="IO\XmlConfigWriter.cs" />
+    <Compile Include="KeyValueXmlReader.cs" />
+    <Compile Include="KeyValueXmlWriter.cs" />
+    <Compile Include="MarsagliaRng.cs" />
+    <Compile Include="MutableTuple.cs" />
+    <Compile Include="PatriciaTree.cs" />
+    <Compile Include="RepeatingEnumerator.cs" />
+    <Compile Include="RepeatingStream.cs" />
+    <Compile Include="ConstantStream.cs" />
+    <Compile Include="PropertyHelper\CustomPropertyInfo.cs" />
+    <Compile Include="PropertyHelper\PropertyBag.cs" />
+    <Compile Include="PropertyHelper\CustomPropertyEventArgs.cs" />
+    <Compile Include="PropertyHelper\PropertyInfoBase.cs" />
+    <Compile Include="PropertyHelper\PropertyBagConverter.cs" />
+    <Compile Include="Slice.cs" />
+    <Compile Include="SliceArrayEnumerator.cs" />
+    <Compile Include="SliceEnumerator.cs" />
+    <Compile Include="UnitConverter.cs" />
+    <Compile Include="Extensions\TextReaderExt.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="ValueChangedEventArgs.cs" />
+    <Compile Include="WebHelper.cs" />
+    <Compile Include="Extensions\XmlNodeExt.cs" />
+    <Compile Include="IO\BaseConfigValue.cs" />
+    <Compile Include="IO\CommonConfigValues.cs" />
+    <Compile Include="IO\ConfigSection.cs" />
+    <Compile Include="IO\ConfigValueFactory.cs" />
+    <Compile Include="IO\Printing\CellElement.cs" />
+    <Compile Include="IO\Printing\CellSizeMode.cs" />
+    <Compile Include="IO\Printing\IPrintableDocumentElement.cs" />
+    <Compile Include="IO\Printing\PageBreakElement.cs" />
+    <Compile Include="IO\Printing\PrintableDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IO\Printing\RowElement.cs" />
+    <Compile Include="IO\Printing\TableElement.cs" />
+    <Compile Include="IO\Printing\TextElement.cs" />
+    <Compile Include="IO\Printing\VerticalSpaceElement.cs" />
+    <Compile Include="PrintValueAttribute.cs" />
+    <Compile Include="PrintValueExtension.cs" />
+    <Compile Include="IO\XmlConfigFile.cs" />
+    <Compile Include="SimpleSettings.cs" />
+    <Compile Include="UI\DataGridViewComboxCell.cs" />
+    <Compile Include="UI\DataGridViewNumTextBoxCell.cs" />
+    <Compile Include="UI\DataGridViewNumTextBoxColumn.cs" />
+    <Compile Include="UI\DataGridViewNumTextBoxEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\DoubleBufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\DoubleBufferedPanel.Designer.cs">
+      <DependentUpon>DoubleBufferedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenericDelegates.cs" />
+    <Compile Include="Extensions\ByteExt.cs" />
+    <Compile Include="Cantor.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="Extensions\IComparableExt.cs" />
+    <Compile Include="MD5Hasher.cs" />
+    <Compile Include="Extensions\ArrayExt.cs" />
+    <Compile Include="UIHelper.cs" />
+    <Compile Include="Extensions\UIntExt.cs" />
+    <Compile Include="IGenericClonable.cs" />
+    <Compile Include="LogSystem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Extensions\StringExt.cs" />
+    <Compile Include="UI\DragBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DragBox.Designer.cs">
+      <DependentUpon>DragBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DragPlane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DragPlane.Designer.cs">
+      <DependentUpon>DragPlane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GridOverlayCount.cs" />
+    <Compile Include="UI\GridOverlaySized.cs" />
+    <Compile Include="UI\IDraggable.cs" />
+    <Compile Include="UI\IOverlay.cs" />
+    <Compile Include="MathUtil.cs" />
+    <Compile Include="UI\TabControlExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\DoubleBufferedPanel.resx">
+      <DependentUpon>DoubleBufferedPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DragBox.resx">
+      <DependentUpon>DragBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DragPlane.resx">
+      <DependentUpon>DragPlane.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3781BB68-65ED-4190-9A4D-8218BBE4FAEA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CopeDefenseLauncher</RootNamespace>
+    <AssemblyName>CopeDefenseLauncher</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="cope, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\copeFrameWork\cope\bin\x86\Release\cope.dll</HintPath>
+    </Reference>
+    <Reference Include="cope.Debug, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\copeFrameWork\cope.Debug\bin\x86\Release\cope.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeleteHeroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteHeroForm.Designer.cs">
+      <DependentUpon>DeleteHeroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoW2Bridge.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewHeroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewHeroForm.Designer.cs">
+      <DependentUpon>NewHeroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerSetupForm.Designer.cs">
+      <DependentUpon>PlayerSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerInterface.cs" />
+    <Compile Include="SteamHelper.cs" />
+    <Compile Include="UnlockMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnlockMenu.Designer.cs">
+      <DependentUpon>UnlockMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpgradeMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpgradeMenu.Designer.cs">
+      <DependentUpon>UpgradeMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WargearMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WargearMenu.Designer.cs">
+      <DependentUpon>WargearMenu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DeleteHeroForm.resx">
+      <DependentUpon>DeleteHeroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewHeroForm.resx">
+      <DependentUpon>NewHeroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerSetupForm.resx">
+      <DependentUpon>PlayerSetupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnlockMenu.resx">
+      <DependentUpon>UnlockMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpgradeMenu.resx">
+      <DependentUpon>UpgradeMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WargearMenu.resx">
+      <DependentUpon>WargearMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DefenseShared\DefenseShared.csproj">
+      <Project>{EB3D0219-6E59-47DE-BE8A-FB156D195ED6}</Project>
+      <Name>DefenseShared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericIconEnergy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericIconPopcap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericIconRequisition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericIconMoney.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericIconEnergy.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

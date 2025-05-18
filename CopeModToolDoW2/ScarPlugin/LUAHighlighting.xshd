@@ -1,0 +1,77 @@
+﻿<?xml version="1.0"?>
+<SyntaxDefinition name="LUA Highlighting" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+  <Color name="Comment" foreground="Green" />
+  <Color name="String" foreground="Red" />
+
+  <!-- This is the main ruleset. -->
+  <RuleSet>
+    <Span color="Comment" multiline="true" begin="--\[\[" end="\]\]" />
+    <Span color="Comment" begin="--" />
+
+    <Span color="String" multiline="true">
+      <Begin>'</Begin>
+      <End>'</End>
+      <RuleSet>
+        <!-- nested span for escape sequences -->
+        <Span begin="\\" end="." />
+      </RuleSet>
+    </Span>
+
+    <Span color="String" multiline ="true">
+      <Begin>"</Begin>
+      <End>"</End>
+      <RuleSet>
+        <!-- nested span for escape sequences -->
+        <Span begin="\\" end="." />
+      </RuleSet>
+    </Span>
+    
+    <Span color="String" begin="\[\[" end="\]\]" multiline="true" />
+
+    <Keywords fontWeight="bold" foreground="Blue">
+      <Word>if</Word>
+      <Word>else</Word>
+      <Word>elseif</Word>
+      <Word>in</Word>
+      <Word>for</Word>
+      <Word>pairs</Word>
+      <Word>function</Word>
+      <Word>end</Word>
+      <Word>return</Word>
+      <Word>local</Word>
+      <Word>while</Word>
+      <Word>do</Word>
+      <Word>then</Word>
+      <Word>break</Word>
+      <Word>or</Word>
+      <Word>and</Word>
+      <Word>not</Word>
+      <Word>repeat</Word>
+      <Word>until</Word>
+    </Keywords>
+
+    <Keywords foreground="Orange">
+      <Word>true</Word>
+      <Word>false</Word>
+      <Word>nil</Word>
+    </Keywords>
+
+    <Keywords foreground="DarkViolet">
+      <Word>print</Word>
+      <Word>assert</Word>
+      <Word>require</Word>
+      <Word>import</Word>
+      <Word>dofile</Word>
+    </Keywords>
+
+    <!-- Digits -->
+    <Rule foreground="DarkBlue">
+      \b0[xX][0-9a-fA-F]+  # hex number
+      |    \b
+      (    \d+(\.[0-9]+)?   #number with optional floating point
+      |    \.[0-9]+         #or just starting with floating point
+      )
+      ([eE][+-]?[0-9]+)? # optional exponent
+    </Rule>
+  </RuleSet>
+</SyntaxDefinition>

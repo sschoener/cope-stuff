@@ -1,0 +1,4 @@
+EXPORTS
+PrepareHook=PrepareHook
+GetDllInterface=GetDllInterface
+GetDllVersion=GetDllVersion

@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGDHashCrawler", "RGDHashCrawler\RGDHashCrawler.csproj", "{F627BAEF-5033-4BE4-A80F-9FA1342AA8C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGDHashBruteforce", "RGDHashBruteforce\RGDHashBruteforce.csproj", "{6C11BCB7-E14C-44EC-8232-D773FDA05C8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGDQuickHash", "RGDQuickHash\RGDQuickHash.csproj", "{F4086E73-7582-4026-8E29-584572C056C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGDConv", "RGDConv\RGDConv.csproj", "{9C8DAF9F-6491-4BDF-813E-DA55320C41E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGDCrawler", "RGDCrawler\RGDCrawler.csproj", "{73FDF603-E580-42EB-9081-30086A3EA9B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F627BAEF-5033-4BE4-A80F-9FA1342AA8C0}.Debug|x86.ActiveCfg = Debug|x86
+		{F627BAEF-5033-4BE4-A80F-9FA1342AA8C0}.Debug|x86.Build.0 = Debug|x86
+		{F627BAEF-5033-4BE4-A80F-9FA1342AA8C0}.Release|x86.ActiveCfg = Release|x86
+		{F627BAEF-5033-4BE4-A80F-9FA1342AA8C0}.Release|x86.Build.0 = Release|x86
+		{6C11BCB7-E14C-44EC-8232-D773FDA05C8E}.Debug|x86.ActiveCfg = Debug|x86
+		{6C11BCB7-E14C-44EC-8232-D773FDA05C8E}.Debug|x86.Build.0 = Debug|x86
+		{6C11BCB7-E14C-44EC-8232-D773FDA05C8E}.Release|x86.ActiveCfg = Release|x86
+		{6C11BCB7-E14C-44EC-8232-D773FDA05C8E}.Release|x86.Build.0 = Release|x86
+		{F4086E73-7582-4026-8E29-584572C056C4}.Debug|x86.ActiveCfg = Debug|x86
+		{F4086E73-7582-4026-8E29-584572C056C4}.Debug|x86.Build.0 = Debug|x86
+		{F4086E73-7582-4026-8E29-584572C056C4}.Release|x86.ActiveCfg = Release|x86
+		{F4086E73-7582-4026-8E29-584572C056C4}.Release|x86.Build.0 = Release|x86
+		{9C8DAF9F-6491-4BDF-813E-DA55320C41E4}.Debug|x86.ActiveCfg = Debug|x86
+		{9C8DAF9F-6491-4BDF-813E-DA55320C41E4}.Debug|x86.Build.0 = Debug|x86
+		{9C8DAF9F-6491-4BDF-813E-DA55320C41E4}.Release|x86.ActiveCfg = Release|x86
+		{9C8DAF9F-6491-4BDF-813E-DA55320C41E4}.Release|x86.Build.0 = Release|x86
+		{73FDF603-E580-42EB-9081-30086A3EA9B1}.Debug|x86.ActiveCfg = Debug|x86
+		{73FDF603-E580-42EB-9081-30086A3EA9B1}.Debug|x86.Build.0 = Debug|x86
+		{73FDF603-E580-42EB-9081-30086A3EA9B1}.Release|x86.ActiveCfg = Release|x86
+		{73FDF603-E580-42EB-9081-30086A3EA9B1}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = RGDHashCrawler\RGDHashCrawler.csproj
+	EndGlobalSection
+EndGlobal

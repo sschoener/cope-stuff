@@ -1,0 +1,47 @@
+using System;
+using System.Diagnostics;
+using Microsoft.Win32;
+
+namespace CrudeModStarter
+{
+	class Program
+	{
+		const string _modName = "_MODNAME_";
+		
+		static void Main(string[] args)
+		{
+			Console.WriteLine("Cope's Crude DoW2 ModLauncher");
+			Console.WriteLine("-----------------------------");
+			Console.WriteLine("Searching for STEAM...");
+
+			string steamPath = GetSteamExe();
+			if (steamPath == null)
+			{
+				Console.WriteLine("Could not find STEAM!\nPlease ensure that STEAM is installed.\nPress any key to continue...");
+				Console.Read();
+				return;
+			}
+
+			Console.WriteLine("Starting " + _modName + "...");
+			string steamParams = "-applaunch _APPID_ -modname " + _modName;
+			if (args.Length > 0)
+			{
+				steamParams += ' ';
+				foreach (string s in args)
+					steamParams += s;
+			}
+			Process.Start(steamPath, steamParams);
+		}
+
+		static string GetSteamExe()
+		{
+			RegistryKey rk_steam_path = Registry.CurrentUser.OpenSubKey("Software\\Valve\\Steam");
+
+			if (rk_steam_path == null || rk_steam_path.GetValue("SteamExe") == null)
+			{
+				return null;
+			}
+			return rk_steam_path.GetValue("SteamExe").ToString();
+		}
+	}
+}

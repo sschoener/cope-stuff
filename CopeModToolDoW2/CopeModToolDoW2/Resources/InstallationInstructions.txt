@@ -1,0 +1,10 @@
+---------------------------
+-Installation Instructions-
+---------------------------
+
+Place the {0}.module file and the {1} folder in your Dawn of War 2 {2} directory (which is normally located at <your_steam_path>\steamapps\common\dawn of war {3}\).
+Now double-click "Launch {0}" to launch the mod. You need the .NET framework (version 2.0 or greater) to start "Launch {0}".
+If you're not sure whether you've got the .NET framework installed, launch "Launch {0}" and see if it crashes.
+Note for advanced users: All arguments passed to "Launch {0}" are redirected to DoW2.
+
+Have fun!

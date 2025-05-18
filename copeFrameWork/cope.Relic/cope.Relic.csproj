@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30B7B116-25A6-4C13-8B67-3A3CAE3573F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cope.Relic</RootNamespace>
+    <AssemblyName>cope.Relic</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>True</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>False</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>True</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zlib">
+      <HintPath>..\..\..\..\Libraries\C#\DotNetZipLib\zlib-v1.9\Release\Ionic.Zlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoHSaveGameReader.cs" />
+    <Compile Include="FieldNameStorage.cs" />
+    <Compile Include="FLBFileReader.cs" />
+    <Compile Include="FLBFileWriter.cs" />
+    <Compile Include="Module\ModuleFile.cs" />
+    <Compile Include="Module\ModuleSection.cs" />
+    <Compile Include="Module\ModuleSectionFileList.cs" />
+    <Compile Include="Module\ModuleSectionKeyValue.cs" />
+    <Compile Include="RB2FileExtractor.cs" />
+    <Compile Include="RB2Reader.cs" />
+    <Compile Include="RelicAttribute\AttributeJSONWriter.cs" />
+    <Compile Include="RelicAttribute\AttributeList.cs" />
+    <Compile Include="RelicAttribute\AttributeXmlReader.cs" />
+    <Compile Include="RelicAttribute\AttributeXmlWriter.cs" />
+    <Compile Include="BAF\BAFHeader.cs" />
+    <Compile Include="BAF\BAFReader.cs" />
+    <Compile Include="BAF\BAFWriter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelicAttribute\AttributeValueType.cs" />
+    <Compile Include="RelicAttribute\AttributeIterator.cs" />
+    <Compile Include="RelicAttribute\AttributeSearch.cs" />
+    <Compile Include="RelicAttribute\AttributeStructure.cs" />
+    <Compile Include="RelicAttribute\AttributeTable.cs" />
+    <Compile Include="RelicAttribute\AttributeValue.cs" />
+    <Compile Include="RelicAttribute\AttributeValueEnumerator.cs" />
+    <Compile Include="RelicAttribute\CorsixStyleConverter.cs" />
+    <Compile Include="RelicAttribute\IAttributeMatchCondition.cs" />
+    <Compile Include="RelicAttribute\IAttributeProcessor.cs" />
+    <Compile Include="RelicAttribute\RGDFileReader.cs" />
+    <Compile Include="RelicAttribute\RGDFileWriter.cs" />
+    <Compile Include="RelicBinary\IRBFKeyProvider.cs" />
+    <Compile Include="RelicBinary\RBFHeader.cs" />
+    <Compile Include="RelicBinary\RBFReader.cs" />
+    <Compile Include="RelicBinary\RBFWriter.cs" />
+    <Compile Include="RelicChunky\ChunkEnumerator.cs" />
+    <Compile Include="RelicChunky\ChunkReader.cs" />
+    <Compile Include="RelicChunky\ChunkTypes\ActionChunk\ActionWriter.cs" />
+    <Compile Include="RelicChunky\ChunkTypes\ActionChunk\Action.cs" />
+    <Compile Include="RelicChunky\ChunkTypes\ActionChunk\ActionReader.cs" />
+    <Compile Include="RelicChunky\ChunkType.cs" />
+    <Compile Include="RelicChunky\ChunkTypes\GameDataChunk\IRGDKeyConverter.cs" />
+    <Compile Include="RelicChunky\ChunkTypes\GameDataChunk\RGDReader.cs" />
+    <Compile Include="RelicChunky\ChunkTypes\GameDataChunk\RGDDictionary.cs" />
+    <Compile Include="RelicChunky\ChunkTypes\GameDataChunk\RGDDictionaryReader.cs" />
+    <Compile Include="RelicChunky\ChunkTypes\GameDataChunk\RGDWriter.cs" />
+    <Compile Include="RelicChunky\ChunkTypes\KeysChunk\KeysReader.cs" />
+    <Compile Include="RelicChunky\ChunkWalker.cs" />
+    <Compile Include="RelicChunky\ChunkWriter.cs" />
+    <Compile Include="RelicChunky\ChunkyFileReader.cs" />
+    <Compile Include="RelicChunky\Chunk.cs" />
+    <Compile Include="RelicChunky\ChunkHeader.cs" />
+    <Compile Include="RelicChunky\ChunkyFileWriter.cs" />
+    <Compile Include="RelicChunky\ChunkyFileHeader.cs" />
+    <Compile Include="RelicChunky\DataChunk.cs" />
+    <Compile Include="RelicChunky\FolderChunk.cs" />
+    <Compile Include="RelicException.cs" />
+    <Compile Include="RelicChunky\ChunkTypes\GameDataChunk\RGDHasher.cs" />
+    <Compile Include="SGA\Patching\SGAPatchReader.cs" />
+    <Compile Include="SGA\Patching\SGAPatchWriter.cs" />
+    <Compile Include="SGA\RawDirectoryDescriptor.cs" />
+    <Compile Include="SGA\RawFileDescriptor.cs" />
+    <Compile Include="SGA\RawSGADescriptor.cs" />
+    <Compile Include="SGA\SGAConstants.cs" />
+    <Compile Include="SGA\SGACrypt.cs" />
+    <Compile Include="SGA\SGADataHeader.cs" />
+    <Compile Include="SGA\RawEntryPoint.cs" />
+    <Compile Include="SGA\SGADumper.cs" />
+    <Compile Include="SGA\SGAEntryPoint.cs" />
+    <Compile Include="SGA\SGAFileHeader.cs" />
+    <Compile Include="SGA\Patching\SGAFilePatch.cs" />
+    <Compile Include="SGA\Patching\SGAPatch.cs" />
+    <Compile Include="SGA\SGAReader.cs" />
+    <Compile Include="SGA\SGAStoredDirectory.cs" />
+    <Compile Include="SGA\SGAStoredFile.cs" />
+    <Compile Include="SGA\SGAVersion.cs" />
+    <Compile Include="SGA\SGAWriter.cs" />
+    <Compile Include="SGA\SGAWriterSettings.cs" />
+    <Compile Include="SpaceMarineHash.cs" />
+    <Compile Include="UCS\UCSReader.cs" />
+    <Compile Include="UCS\UCSStrings.cs" />
+    <Compile Include="UCS\UCSWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cope\cope.csproj">
+      <Project>{45FBEFB6-5708-4A29-9664-69725B601F5F}</Project>
+      <Name>cope</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RelicChunky\ChunkTypes\chunk_readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

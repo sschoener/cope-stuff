@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5860694A-E885-4119-AB4A-3BE558EC6224}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cope.DawnOfWar2</RootNamespace>
+    <AssemblyName>cope.DawnOfWar2</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>False</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>True</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <DocumentationFile>bin\x86\Release\cope.DawnOfWar2.XML</DocumentationFile>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttributeXmlReader.cs" />
+    <Compile Include="AttributeXmlWriter.cs" />
+    <Compile Include="BAF\BAFHeader.cs" />
+    <Compile Include="BAF\BAFReader.cs" />
+    <Compile Include="BAF\BAFWriter.cs" />
+    <Compile Include="CopeDoW2Exception.cs" />
+    <Compile Include="FieldNameFile.cs" />
+    <Compile Include="ModuleFile.cs" />
+    <Compile Include="RB2FileExtractor.cs" />
+    <Compile Include="RelicAttribute\AttributeIterator.cs" />
+    <Compile Include="RelicAttribute\AttributeDataType.cs" />
+    <Compile Include="RelicAttribute\AttributeSearch.cs" />
+    <Compile Include="RelicAttribute\AttributeTable.cs" />
+    <Compile Include="RelicAttribute\AttributeValue.cs" />
+    <Compile Include="RelicAttribute\AttributeValueEnumerator.cs" />
+    <Compile Include="RelicAttribute\CorsixStyleConverter.cs" />
+    <Compile Include="RelicAttribute\IAttributeMatchCondition.cs" />
+    <Compile Include="RelicAttribute\IAttributeProcessor.cs" />
+    <Compile Include="RelicBinary\IRBFKeyProvider.cs" />
+    <Compile Include="RelicBinary\RBFReader.cs" />
+    <Compile Include="RelicBinary\RBFWriter.cs" />
+    <Compile Include="RelicAttribute\AttributeStructure.cs" />
+    <Compile Include="RelicBinary\RBFHeader.cs" />
+    <Compile Include="RelicBinary\RelicBinaryFile.cs" />
+    <Compile Include="RelicChunky\Chunks\ACTN\ACTNChunk.cs" />
+    <Compile Include="RelicChunky\Chunks\ACTN\ACTNAction.cs" />
+    <Compile Include="RelicChunky\Chunks\DataChunk.cs" />
+    <Compile Include="RelicChunky\Chunks\FoldChunk.cs" />
+    <Compile Include="RelicChunky\RelicChunk.cs" />
+    <Compile Include="RelicChunky\RelicChunkHeader.cs" />
+    <Compile Include="RelicChunky\RelicChunkyFile.cs" />
+    <Compile Include="RelicChunky\RelicChunkyFileHeader.cs" />
+    <Compile Include="SGANew\SGAArchive.cs" />
+    <Compile Include="SGANew\SGAConstants.cs" />
+    <Compile Include="SGANew\SGACrypt.cs" />
+    <Compile Include="SGANew\SGADataHeader.cs" />
+    <Compile Include="SGANew\SGAFileHeader.cs" />
+    <Compile Include="SGANew\SGAReader.cs" />
+    <Compile Include="SGANew\SGAVersion.cs" />
+    <Compile Include="SGA\SGAContainer.cs" />
+    <Compile Include="SGA\SGACrypt.cs" />
+    <Compile Include="SGA\SGADataHeader.cs" />
+    <Compile Include="SGA\SGAEntryPoint.cs" />
+    <Compile Include="SGA\SGAFile.cs" />
+    <Compile Include="SGA\SGAFileHeader.cs" />
+    <Compile Include="SGA\SGAStoredDirectory.cs" />
+    <Compile Include="SGA\SGAStoredFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StreamExt\IStreamExtBinaryCompatible.cs" />
+    <Compile Include="Taggable.cs" />
+    <Compile Include="UCSReader.cs" />
+    <Compile Include="UCSStrings.cs" />
+    <Compile Include="UCSWriter.cs" />
+    <Compile Include="UniFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cope\cope.csproj">
+      <Project>{45FBEFB6-5708-4A29-9664-69725B601F5F}</Project>
+      <Name>cope</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4BF1F3D8-9DAC-4FAF-9427-5109D1495D8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CopeShared</RootNamespace>
+    <AssemblyName>CopeModToolCore</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Be.Windows.Forms.HexBox">
+      <HintPath>..\3rd\Be.Windows.Forms.HexBox.dll</HintPath>
+    </Reference>
+    <Reference Include="cope, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\copeFrameWork\cope\bin\x86\Release\cope.dll</HintPath>
+    </Reference>
+    <Reference Include="cope.DawnOfWar2, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\copeFrameWork\cope.DawnOfWar2\bin\x86\Release\cope.DawnOfWar2.dll</HintPath>
+    </Reference>
+    <Reference Include="cope.Debug, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\copeFrameWork\cope.Debug\bin\x86\Release\cope.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArchivePackerInfo.cs" />
+    <Compile Include="ArchivePacker.cs" />
+    <Compile Include="ArchiveToolHelper.cs" />
+    <Compile Include="ConfigManager.cs" />
+    <Compile Include="DebugManager.cs" />
+    <Compile Include="DebugWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebugWindow.Designer.cs">
+      <DependentUpon>DebugWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileSystemTree\FSNodeVirtualFile.cs" />
+    <Compile Include="FileManager.cs" />
+    <Compile Include="FileSystemTree\FileTree.cs" />
+    <Compile Include="FileSystemTree\FileTreeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileSystemTree\FileTreeControl.Designer.cs">
+      <DependentUpon>FileTreeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileSystemTree\FSNode.cs" />
+    <Compile Include="FileSystemTree\FSNodeDir.cs" />
+    <Compile Include="FileSystemTree\FSNodeFile.cs" />
+    <Compile Include="FileSystemTree\TreeNodeExt.cs" />
+    <Compile Include="FileTypeManager.cs" />
+    <Compile Include="FileTypePluginManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileTypePluginManager.Designer.cs">
+      <DependentUpon>FileTypePluginManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameConstants.cs" />
+    <Compile Include="LoggingManager.cs" />
+    <Compile Include="ModManager.cs" />
+    <Compile Include="ModToolEnvironment.cs" />
+    <Compile Include="PluginManager.cs" />
+    <Compile Include="PluginManagerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PluginManagerControl.Designer.cs">
+      <DependentUpon>PluginManagerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIns\FileTypePlugin.cs" />
+    <Compile Include="PlugIns\ModToolPlugin.cs" />
+    <Compile Include="PlugIns\FileTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlugIns\FileTool.Designer.cs">
+      <DependentUpon>FileTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIns\PluginEnvironment.cs" />
+    <Compile Include="PlugIns\RelicChunky\ChunkHandler\ACTN\ACTNHandler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlugIns\RelicChunky\ChunkHandler\ACTN\ACTNHandler.Designer.cs">
+      <DependentUpon>ACTNHandler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIns\RelicChunky\ChunkHandler\BaseHandler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlugIns\RelicChunky\ChunkHandler\BaseHandler.Designer.cs">
+      <DependentUpon>BaseHandler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIns\RelicChunky\ChunkHandler\StandardChunkHandler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlugIns\RelicChunky\ChunkHandler\StandardChunkHandler.Designer.cs">
+      <DependentUpon>StandardChunkHandler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIns\RelicChunky\ChunkManager.cs" />
+    <Compile Include="PlugIns\RelicChunky\ChunkyFileInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlugIns\RelicChunky\ChunkyFileInfo.Designer.cs">
+      <DependentUpon>ChunkyFileInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIns\RelicChunky\ChunkyFileInfoBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlugIns\RelicChunky\ChunkyFileInfoBox.Designer.cs">
+      <DependentUpon>ChunkyFileInfoBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIns\RelicChunky\ChunkyHeaderInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlugIns\RelicChunky\ChunkyHeaderInfo.Designer.cs">
+      <DependentUpon>ChunkyHeaderInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIns\RelicChunky\RelicChunkyViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlugIns\RelicChunky\RelicChunkyViewer.Designer.cs">
+      <DependentUpon>RelicChunkyViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlugIns\Text\TextEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlugIns\Text\TextEditor.Designer.cs">
+      <DependentUpon>TextEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ToolSettings.cs" />
+    <Compile Include="UCSManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DebugWindow.resx">
+      <DependentUpon>DebugWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSystemTree\FileTreeControl.resx">
+      <DependentUpon>FileTreeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileTypePluginManager.resx">
+      <DependentUpon>FileTypePluginManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PluginManagerControl.resx">
+      <DependentUpon>PluginManagerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlugIns\RelicChunky\ChunkHandler\ACTN\ACTNHandler.resx">
+      <DependentUpon>ACTNHandler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlugIns\RelicChunky\ChunkHandler\StandardChunkHandler.resx">
+      <DependentUpon>StandardChunkHandler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlugIns\RelicChunky\ChunkyFileInfo.resx">
+      <DependentUpon>ChunkyFileInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlugIns\RelicChunky\ChunkyFileInfoBox.resx">
+      <DependentUpon>ChunkyFileInfoBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlugIns\RelicChunky\ChunkyHeaderInfo.resx">
+      <DependentUpon>ChunkyHeaderInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlugIns\RelicChunky\RelicChunkyViewer.resx">
+      <DependentUpon>RelicChunkyViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlugIns\Text\TextEditor.resx">
+      <DependentUpon>TextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArchiveDesign.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
